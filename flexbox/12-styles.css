@@ -71,7 +71,7 @@
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: .04rem;
     --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 0 2rem;
+    --nav-item-margin: 0 0 0  2rem;
     --nav-item-link-hover: var(--color-white);
   
     /** BUTTON **/
@@ -207,15 +207,16 @@
     text-align: center;
   }
   
-  .nav .nav-item + .nav-item{
-     margin: var(--nav-item-margin);
-
-  }
   .nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
+
+  }
+
+  .nav .nav-item + .nav-item{
+    margin: var(--nav-item-margin);
   }
   
   .nav .nav-link {
@@ -248,9 +249,9 @@
   /* Header
       ============================= */
       .header-container {
+        align-items: center;
         display: flex;
         justify-content: space-between;
-        align-items: center;
       }
   
   .header {
@@ -346,14 +347,14 @@
   .section-hero {
     position: relative;
     margin-top: -8.5rem;
-
   }
-  .section-hero .section-body{
+
+  .section-hero .section-body {
     padding: 10rem 4rem;
-
   }
-  .section-hero .section-category{
-    color:var(--color-white);
+
+  .section-hero .section-category {
+    color: var(--color-white);
     text-transform: uppercase;
   }
 
@@ -387,11 +388,11 @@
 .section-services .row {
     flex-wrap: wrap;
 }
+
 /* Section ABOUT US */
 .section-about-us [class*='col-'] {
     align-self: center;
 }
-
 
 /*** 4. CARD ***/
 /* Existing styles for the CARD section */
@@ -523,7 +524,9 @@
     font-size: 10rem;
     z-index: -1;
   }
- /*** ARTICLE PAGE ***/
+
+
+  /*** ARTICLE PAGE ***/
   /* Section HERO (article)
   ============================= */
 
@@ -554,3 +557,27 @@
     padding: 7rem 0 0;
     z-index: 2;
   }
+
+  .main-article {
+    padding: 5rem 0;
+  }
+
+  /* Post
+    ============================= */
+
+    .post {
+      display: flex;
+    }
+
+    .main-article .post {
+        display: flex;
+    }
+
+    .post-content {
+        width: 100%;
+    }
+
+    .post-aside {
+        order: -1;
+        min-width: 20%;
+    }
